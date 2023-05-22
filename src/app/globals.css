@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    /* min-height: 100vh; */
+    /* Premium Dark */
+    /* background: linear-gradient(to right, #434343 0%, black 100%); */
+
+    /* Royal */
+    /* background: linear-gradient(to right, #141e30, #243b55); */
+
+    background-color: #212428;
+}
