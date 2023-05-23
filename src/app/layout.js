@@ -1,4 +1,10 @@
 import './globals.css'
+import { Expletus_Sans } from 'next/font/google';
+
+const expletus_Sans= Expletus_Sans({
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -7,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={expletus_Sans.className}>
       <body>{children}</body>
     </html>
   )

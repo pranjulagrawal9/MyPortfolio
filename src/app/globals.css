@@ -8,7 +8,9 @@ body{
     /* background: linear-gradient(to right, #434343 0%, black 100%); */
 
     /* Royal */
-    /* background: linear-gradient(to right, #141e30, #243b55); */
+    background: linear-gradient(to right, #141e30, #243b55);
 
-    background-color: #212428;
+    /* background-color: #212428; */
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
 }
