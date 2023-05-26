@@ -28,22 +28,22 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex mb-48">
       <div className="w-2/3 pt-10 pr-6">
         <div className="mb-5">
           <h3 className="uppercase tracking-[0.2em] mb-5">
             Transforming Ideas into Software
           </h3>
-          <h1 className="text-6xl text-white font-bold max-[1170px]:text-5xl">
+          <h1 className="text-6xl text-white font-bold max-[1150px]:text-5xl">
             Hi, I’m{" "}
             <span className="text-[#ff014f] font-bold">Pranjul Agrawal</span>
             <br />
-            <span className="text-5xl font-medium max-[1170px]:text-4xl">
+            <span className="text-5xl font-medium max-[1150px]:text-4xl">
               a <span ref={el}></span>
             </span>
           </h1>
         </div>
-        <p className="leading-7 mb-24">
+        <p className="leading-7 mb-24 max-[1150px]:mb-10">
           I am a passionate frontend developer dedicated to crafting captivating
           user experiences through clean and intuitive web interfaces. Driven by
           collaboration and staying up-to-date with the latest trends, I create
@@ -101,13 +101,13 @@ function HeroSection() {
                   r="44.899"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#fd5" />
-                  <stop offset=".328" stop-color="#ff543f" />
-                  <stop offset=".348" stop-color="#fc5245" />
-                  <stop offset=".504" stop-color="#e64771" />
-                  <stop offset=".643" stop-color="#d53e91" />
-                  <stop offset=".761" stop-color="#cc39a4" />
-                  <stop offset=".841" stop-color="#c837ab" />
+                  <stop offset="0" stopColor="#fd5" />
+                  <stop offset=".328" stopColor="#ff543f" />
+                  <stop offset=".348" stopColor="#fc5245" />
+                  <stop offset=".504" stopColor="#e64771" />
+                  <stop offset=".643" stopColor="#d53e91" />
+                  <stop offset=".761" stopColor="#cc39a4" />
+                  <stop offset=".841" stopColor="#c837ab" />
                 </radialGradient>
                 <path
                   fill="#000"
@@ -122,8 +122,8 @@ function HeroSection() {
                   gradientTransform="matrix(1 0 0 .6663 0 1.849)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#4168c9" />
-                  <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+                  <stop offset="0" stopColor="#4168c9" />
+                  <stop offset=".999" stopColor="#4168c9" stopOpacity="0" />
                 </radialGradient>
                 <path
                   fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
@@ -152,8 +152,8 @@ function HeroSection() {
         </div>
       </div>
       <div className="w-1/3 pl-6">
-        <div className="min-w-[320px] max-w-full h-fit relative before:w-full before:h-3/4 before:bg-[#19283b] before:rounded-t-full before:block before:absolute before:bottom-0 before:-z-10">
-          <Image src={Photo} width="100%" />
+        <div className="relative before:w-full before:h-3/4 before:bg-[#19283b] before:rounded-t-full before:block before:absolute before:bottom-0 before:-z-10">
+          <Image src={Photo} width="100%" alt="Pranjul Agrawal" />
         </div>
       </div>
     </div>

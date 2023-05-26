@@ -10,6 +10,7 @@ function NavBar() {
           src={Logo}
           width="64"
           className="w-32 h-32 object-cover absolute -top-2"
+          alt="Logo"
         />
       </div>
 
