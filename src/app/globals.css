@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .tab-active{
+        @apply shadow-[0px_0px_25px_0px_rgba(130,130,130,0.5)] bg-black text-red-600;
+    }
+    .tab{
+        @apply flex-1 cursor-pointer bg-gray-900 text-center py-5 hover:rounded-lg hover:shadow-[0px_0px_25px_0px_rgba(130,130,130,0.5)] hover:bg-black hover:text-red-600
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     /* min-height: 100vh; */
     /* Premium Dark */

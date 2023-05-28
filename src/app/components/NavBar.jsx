@@ -1,15 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import Logo from "../../../public/assets/images/Logo.png";
+import Photo from "../../../public/assets/images/Photo.png";
+import Link from "next/link";
 
 function NavBar() {
   return (
     <nav className="py-3 px-7 flex justify-between items-center mb-10">
-      <div className="w-16 h-16 bg-black rounded-full overflow-hidden relative border-[3px] border-gray-700">
+      <div className="w-16 h-16 bg-black rounded-full overflow-hidden border-[3px] border-gray-700">
         <Image
-          src={Logo}
+          src={Photo}
           width="64"
-          className="w-32 h-32 object-cover absolute -top-2"
+          className="w-32 h-32 object-cover "
           alt="Logo"
         />
       </div>
@@ -17,7 +18,8 @@ function NavBar() {
       <div>
         <ul className="flex gap-6 uppercase text-gray-300 text-sm">
           <li>Home</li>
-          <li>Portfolio</li>
+
+          <a href="#portfolio"><li>Portfolio</li></a>
           <li>Resume</li>
           <li>Pricing</li>
           <li>Contact</li>

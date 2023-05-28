@@ -28,7 +28,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="flex mb-48">
+    <div className="flex">
       <div className="w-2/3 pt-10 pr-6">
         <div className="mb-5">
           <h3 className="uppercase tracking-[0.2em] mb-5">

@@ -6,13 +6,14 @@ import testImg from "../../../public/assets/images/swiggySnap.png";
 import ReactModal from "react-modal";
 import { RxCross2 } from "react-icons/rx";
 import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 function ProjectCard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <div className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12">
+      <motion.div className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12" initial={{y: 100, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: .4}}>
         <div>
           <div className="p-7 bg-[#212428] rounded-3xl shadow-xl shadow-slate-600 hover:bg-[#a10030] transition ease-in-out duration-200">
             <Image
@@ -27,7 +28,7 @@ function ProjectCard() {
             </h2>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <ReactModal
         isOpen={isModalOpen}
