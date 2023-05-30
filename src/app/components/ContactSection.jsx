@@ -6,10 +6,12 @@ import contact from "../../../public/assets/images/contact.json";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import { formValidationSchema } from "../validations/formValidationSchema";
+import { motion as m } from "framer-motion";
 
 function ContactSection() {
   const form = useRef();
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState(false);
   const formik = useFormik({
     initialValues: {
       user_name: "",
@@ -33,6 +35,7 @@ function ContactSection() {
               resetForm();
             },
             (error) => {
+              setFormError(true);
               console.log(error.text);
             }
           );
@@ -50,6 +53,18 @@ function ContactSection() {
       };
     }
   }, [isFormSubmitted]);
+
+  useEffect(() => {
+    if (formError) {
+      const timer = setTimeout(() => {
+        setFormError(false);
+      }, 5000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [formError]);
 
   return (
     <div id="contact">
@@ -166,18 +181,39 @@ function ContactSection() {
             </div>
 
             {isFormSubmitted && (
-              <div className="text-green-500 font-semibold text-lg">
+              <m.div
+                className="text-green-500 font-semibold text-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+              >
                 Your submission is appreciated. Thank you!. You can expect to
                 hear back within 24 hours.
-              </div>
+              </m.div>
             )}
 
-            <button
-              type="submit"
-              className="w-28 bg-red-600 py-2 rounded-lg hover:bg-red-700 font-semibold active:scale-90"
-            >
-              Send
-            </button>
+            {formError && (
+              <m.div
+                className="text-red-500 font-semibold text-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                Oops! Something went wrong. Please re-submit after sometime.
+              </m.div>
+            )}
+
+            {!isFormSubmitted && !formError && (
+              <m.button
+                type="submit"
+                className="w-28 bg-red-600 py-2 rounded-lg hover:bg-red-700 font-semibold active:scale-90"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                Send
+              </m.button>
+            )}
           </form>
         </div>
       </div>
