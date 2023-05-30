@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={expletus_Sans.className}>
-      <body>{children}</body>
+      <body className='mb-10'>{children}</body>
     </html>
   )
 }
