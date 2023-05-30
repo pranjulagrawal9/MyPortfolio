@@ -29,17 +29,10 @@ function SkillsSection() {
         >
           Backend
         </span>
-        <span
-          onClick={() => handleTabClick("other")}
-          className={`tab ${activeTab === "other" ? "tab-active" : ""}`}
-        >
-          Other
-        </span>
       </div>
 
       {activeTab === "frontend" && <FrontEndSkills />}
       {activeTab === "backend" && <BackendSkills />}
-      {activeTab === "other" && <div>Other Content</div>}
     </motion.div>
   );
 }

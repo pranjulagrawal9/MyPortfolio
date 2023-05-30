@@ -5,6 +5,7 @@ import HTML from "../../../public/assets/images/HTML.png";
 import react from "../../../public/assets/images/react.png";
 import js from "../../../public/assets/images/js.png";
 import redux from "../../../public/assets/images/redux.png";
+import git from "../../../public/assets/images/git.png";
 import { motion } from "framer-motion";
 
 function FrontEndSkills() {
@@ -39,7 +40,7 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[80%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "80%" }}
                 transition={{ duration: 0.4 }}
@@ -77,7 +78,7 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[80%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "80%" }}
                 transition={{ duration: 0.4 }}
@@ -93,7 +94,7 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[60%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "60%" }}
                 transition={{ duration: 0.4 }}
@@ -109,7 +110,7 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[90%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "90%" }}
                 transition={{ duration: 0.4 }}
@@ -126,7 +127,7 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[90%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "90%" }}
                 transition={{ duration: 0.4 }}
@@ -156,11 +157,27 @@ function FrontEndSkills() {
           <div className="w-3/4">
             <div className="bg-black w-full h-5 rounded-md flex items-center">
               <motion.div
-                className="w-[60%] bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "60%" }}
                 transition={{ duration: 0.4 }}
                 viewport={{once: true}}
+              ></motion.div>
+            </div>
+          </div>
+        </li>
+        <li className="flex items-center">
+          <div className="w-1/4 flex justify-center">
+            <Image src={git} className="w-20" />
+          </div>
+          <div className="w-3/4">
+            <div className="bg-black w-full h-5 rounded-md flex items-center">
+              <motion.div
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                initial={{ width: "0%" }}
+                whileInView={{ width: "80%" }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true }}
               ></motion.div>
             </div>
           </div>
