@@ -43,6 +43,7 @@ function ProjectCard() {
           <RxCross2
             fontSize="22px"
             cursor="pointer"
+            className="hover:bg-red-600 hover: rounded-sm"
             onClick={() => setIsModalOpen(false)}
           />
         </div>
@@ -83,8 +84,8 @@ function ProjectCard() {
               </li>
             </ul>
 
-            <div className="flex items-center gap-10 mt-2.5">
-              <div className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold">
+            <div className="flex gap-10 mt-2.5 items-stretch">
+              <div className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-1 rounded transition-colors duration-300">
                 <span>Live App</span>
                 <FiExternalLink
                   fontSize="26px"
@@ -92,7 +93,7 @@ function ProjectCard() {
                 />
               </div>
 
-              <div className="flex items-center group cursor-pointer">
+              <div className="flex items-center group cursor-pointer hover:bg-white rounded px-1 transition-colors duration-300">
                 <span className="group-hover:text-red-600 font-bold text-[#C4CFDE]">
                   Source Code
                 </span>
