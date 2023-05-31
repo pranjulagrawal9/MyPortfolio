@@ -43,7 +43,7 @@ function HeroSection() {
             </span>
           </h1>
         </div>
-        <p className="leading-7 mb-24 max-[1150px]:mb-10">
+        <p id="my-desc" className="leading-7 mb-24 max-[1150px]:mb-10">
           I am a passionate frontend developer dedicated to crafting captivating
           user experiences through clean and intuitive web interfaces. Driven by
           collaboration and staying up-to-date with the latest trends, I create

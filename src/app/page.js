@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="w-[1100px] mx-auto max-[1150px]:w-[1000px] max-[1050px]:w-[900px]">
+      <div className="w-[1100px] mx-auto max-[1150px]:w-[1000px] max-[1050px]:w-[900px] main-content">
         <HeroSection />
         <PortfolioSection />
         <SkillsSection />

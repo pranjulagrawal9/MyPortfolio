@@ -71,6 +71,14 @@
   .form__field:invalid {
     box-shadow: none;
   }
+
+  .nav-fixed nav{
+    @apply fixed top-0 left-0 w-full z-20 bg-gradient-to-r from-[#141e30]/70 to-[#243b55]/70 shadow-md shadow-slate-800 backdrop-blur-xl
+  }
+
+  .nav-fixed .main-content{
+    @apply mt-28
+  }
 }
 
 html {
@@ -115,6 +123,7 @@ body {
   background: linear-gradient(to right, #141e30, #243b55);
   background-repeat: no-repeat;
   overflow-y: auto;
+  z-index: 100;
 }
 
 .ReactModal__Overlay {
