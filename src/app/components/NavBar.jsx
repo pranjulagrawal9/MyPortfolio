@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Photo from "../../../public/assets/images/Photo.png";
-import Link from "next/link";
 
 function NavBar() {
   useEffect(() => {
@@ -26,8 +25,30 @@ function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) {
+          document.getElementById("home").style.opacity='0';
+        }
+        else
+          document.getElementById("home").style.opacity='1';
+      },
+      {
+        threshold: 0
+      }
+    );
+
+    observer.observe(document.getElementById("home"));
+  
+    return () => {
+      observer.unobserve(document.getElementById("home"));
+    }
+  }, [])
+  
+
   return (
-    <nav id="home" className="px-7 flex justify-between items-center h-20 mb-8">
+    <nav id="home" className="px-7 flex justify-between items-center h-20 mb-8 transition-opacity duration-500">
       <div className="w-16 h-16 bg-black rounded-full overflow-hidden border-[3px] border-gray-700">
         <Image
           src={Photo}
