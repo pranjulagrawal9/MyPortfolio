@@ -13,8 +13,8 @@ function SkillsSection() {
   };
 
   return (
-    <motion.div id="skills" className="mt-28 min-h-screen" initial={{x: '-100%', opacity: 0}} whileInView={{x: '0', opacity: 1}} transition={{duration: .5}}>
-      <h2 className="text-center text-5xl font-extrabold mb-16">Skills</h2>
+    <motion.div id="skills" className="mt-28 min-h-screen max-[850px]:w-11/12" initial={{x: '-100%', opacity: 0}} whileInView={{x: '0', opacity: 1}} transition={{duration: .5}}>
+      <h2 className="text-center text-5xl font-extrabold mb-16 max-[425px]:text-3xl">Skills</h2>
 
       <div className="flex text-xl font-semibold">
         <span

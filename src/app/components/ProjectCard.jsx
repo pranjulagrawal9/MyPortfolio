@@ -13,7 +13,7 @@ function ProjectCard() {
 
   return (
     <>
-      <motion.div className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12" initial={{y: 100, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: .4}}>
+      <motion.div className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12 max-[850px]:w-2/3 max-[640px]:w-11/12" initial={{y: 100, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: .4}}>
         <div>
           <div className="p-7 bg-[#212428] rounded-3xl shadow-xl shadow-slate-600 hover:bg-[#a10030] transition ease-in-out duration-200">
             <Image
@@ -23,7 +23,7 @@ function ProjectCard() {
               className="mb-8 rounded-lg scale-100 cursor-pointer hover:scale-125 transition-all"
               onClick={() => setIsModalOpen(true)}
             />
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-semibold max-[425px]:text-lg">
               Food Delivery Application made using React
             </h2>
           </div>
@@ -34,7 +34,7 @@ function ProjectCard() {
         isOpen={isModalOpen}
         shouldCloseOnOverlayClick={true}
         onRequestClose={() => setIsModalOpen(false)}
-        className="modal relative"
+        className="modal relative max-[425px]:px-5"
         overlayClassName="overlay"
         closeTimeoutMS={200}
         ariaHideApp={false}
@@ -48,48 +48,43 @@ function ProjectCard() {
           />
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex gap-5 max-[1024px]:flex-col">
           <div className="flex-1">
             <Image src={testImg} width="100%" className="rounded-md" alt="Project" />
           </div>
           <div className="flex-1">
-            <h2 className="text-3xl font-extrabold mb-3 text-[#C4CFDE]">
+            <h2 className="text-3xl font-extrabold mb-3 text-[#C4CFDE] max-[425px]:text-2xl">
               Food Delivery Application made using React
             </h2>
 
             <ul className="font-medium text-[#a1aab8] leading-7 tracking-wide">
               <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                {" "}
-                Used Swiggy's public API to fetch restaurants data
+                Used Swiggy&apos;s public API to fetch restaurants data
               </li>
               <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                {" "}
                 Leveraged the power of the Intersection Observer API to
                 implement efficient infinite scrolling, enabling dynamic loading
                 of restaurant data.
               </li>
               <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                {" "}
                 Used Redux javascript libary for managing and centralizing
                 application state
               </li>
               <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                {" "}
-                Utilized Parcel as a bundler, optimizing the application's
+                Utilized Parcel as a bundler, optimizing the application&apos;s
                 performance and facilitating smooth deployment.
               </li>
               <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                {" "}
                 Implemented code splitting to make the code efficient
               </li>
             </ul>
 
-            <div className="flex gap-10 mt-2.5 items-stretch">
+            <div className="flex gap-10 mt-2.5 items-stretch max-[425px]:gap-5">
               <div className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-1 rounded transition-colors duration-300">
                 <span>Live App</span>
                 <FiExternalLink
                   fontSize="26px"
-                  className="group-hover:scale-125 transition-all"
+                  className="group-hover:scale-125 transition-all max-[425px]:text-xl"
                 />
               </div>
 
@@ -102,7 +97,7 @@ function ProjectCard() {
                   viewBox="0 0 100 100"
                   width="50px"
                   height="50px"
-                  className="group-hover:scale-125 transition-all"
+                  className="group-hover:scale-125 transition-all max-[425px]:w-9 max-[425px]:h-9"
                 >
                   <circle
                     cx="50"

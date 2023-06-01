@@ -28,32 +28,32 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="flex">
-      <div className="w-2/3 pt-10 pr-6">
+    <div className="flex max-[850px]:flex-col max-[850px]:w-11/12">
+      <div className="w-2/3 pt-10 pr-6 max-[850px]:w-full">
         <div className="mb-5">
-          <h3 className="uppercase tracking-[0.2em] mb-5">
+          <h3 className="uppercase tracking-[0.2em] mb-5 max-[425px]:text-sm max-[375px]:text-xs">
             Transforming Ideas into Software
           </h3>
-          <h1 className="text-6xl text-white font-bold max-[1150px]:text-5xl">
+          <h1 className="text-6xl text-white font-bold max-[1150px]:text-5xl max-[950px]:text-4xl max-[850px]:text-5xl max-[425px]:text-4xl max-[375px]:text-3xl">
             Hi, I’m{" "}
             <span className="text-[#ff014f] font-bold">Pranjul Agrawal</span>
             <br />
-            <span className="text-5xl font-medium max-[1150px]:text-4xl">
+            <span className="text-5xl font-medium max-[1150px]:text-4xl max-[950px]:text-3xl max-[850px]:text-4xl max-[425px]:text-3xl max-[375px]:text-2xl">
               a <span ref={el}></span>
             </span>
           </h1>
         </div>
-        <p id="my-desc" className="leading-7 mb-24 max-[1150px]:mb-10">
+        <p id="my-desc" className="leading-7 mb-24 max-[1150px]:mb-10 max-[950px]:text-sm max-[950px]:leading-6 max-[850px]:text-base max-[850px]:leading-7 max-[375px]:text-sm max-[375px]:leading-6">
           I am a passionate frontend developer dedicated to crafting captivating
           user experiences through clean and intuitive web interfaces. Driven by
           collaboration and staying up-to-date with the latest trends, I create
           modern and engaging digital experiences that bring ideas to life.
         </p>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between max-[850px]:mb-10 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-10">
           <div>
-            <h4 className="uppercase mb-3">Connect With Me</h4>
-            <div className="flex gap-4">
+            <h4 className="uppercase mb-3 max-[640px]:text-center">Connect With Me</h4>
+            <div className="flex gap-4 max-[640px]:gap-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -142,8 +142,8 @@ function HeroSection() {
             </div>
           </div>
           <div>
-            <h4 className="uppercase">My Top Skills</h4>
-            <div className="flex gap-4">
+            <h4 className="uppercase max-[640px]:text-center">My Top Skills</h4>
+            <div className="flex gap-4 max-[640px]:gap-10">
               <Lottie animationData={reactAnimation} style={{width: '70px'}} />
               <Lottie animationData={jsAnimation} style={{width: '50px'}} />
               <Lottie animationData={cssAnimation} style={{width: '70px'}} />
@@ -151,7 +151,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="w-1/3 pl-6">
+      <div className="w-1/3 pl-6 max-[850px]:w-80 max-[850px]:mx-auto max-[425px]:w-56">
         <div className="relative before:w-full before:h-3/4 before:bg-[#19283b] before:rounded-t-full before:block before:absolute before:bottom-0 before:-z-10">
           <Image src={Photo} width="100%" alt="Pranjul Agrawal" />
         </div>

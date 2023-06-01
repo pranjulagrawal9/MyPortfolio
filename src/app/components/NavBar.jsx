@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Photo from "../../../public/assets/images/Photo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function NavBar() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,37 +32,41 @@ function NavBar() {
     const observer = new IntersectionObserver(
       (entries) => {
         if (!entries[0].isIntersecting) {
-          document.getElementById("home").style.opacity='0';
-        }
-        else
-          document.getElementById("home").style.opacity='1';
+          document.getElementById("home").style.opacity = "0";
+        } else document.getElementById("home").style.opacity = "1";
       },
       {
-        threshold: 0
+        threshold: 0,
       }
     );
 
     observer.observe(document.getElementById("home"));
-  
+
     return () => {
       observer.unobserve(document.getElementById("home"));
-    }
-  }, [])
-  
+    };
+  }, []);
 
   return (
-    <nav id="home" className="px-7 flex justify-between items-center h-20 mb-8 transition-opacity duration-500">
-      <div className="w-16 h-16 bg-black rounded-full overflow-hidden border-[3px] border-gray-700">
+    <nav
+      id="home"
+      className="px-7 flex justify-between items-center h-20 mb-8 transition-opacity duration-500"
+    >
+      <div className="w-16 h-16 max-[850px]:w-12 max-[850px]:h-12 bg-black rounded-full overflow-hidden border-[3px] border-gray-700">
         <Image
           src={Photo}
           width="64"
-          className="w-32 h-32 object-cover "
+          className="w-32 h-32 max-[850px]:w-24 max-[850px]:h-24 object-cover "
           alt="Logo"
         />
       </div>
 
-      <div>
-        <ul className="flex gap-6 uppercase text-gray-300 text-sm items-center">
+      <div
+        className={`flex text-sm gap-6 max-[640px]:hidden max-[640px]:gap-4 ${
+          showMobileMenu ? "!flex max-[640px]:flex-col max-[640px]:absolute max-[640px]:top-20 max-[640px]:left-0 max-[640px]:right-0 max-[640px]:bg-[#243b55] max-[640px]:p-6 max-[640px]:z-30 max-[640px]:shadow-lg" : ""
+        }`}
+      >
+        <ul className="flex gap-6 uppercase text-gray-300 items-center max-[640px]:flex-col max-[640px]:gap-4">
           <li
             className="tracking-widest cursor-pointer"
             onClick={() => window.scrollTo({ top: 0 })}
@@ -78,14 +85,18 @@ function NavBar() {
           <a href="#contact">
             <li className="tracking-widest">Contact</li>
           </a>
-
-          <a href="/assets/images/Resume_Pranjul.pdf" download="Resume.pdf">
-            <li className="tracking-widest bg-red-600 px-2 py-3 rounded-lg font-bold hover:bg-red-700 cursor-pointer select-none active:scale-90 transition-all">
-              Download CV
-            </li>
-          </a>
         </ul>
+        <a href="/assets/images/Resume_Pranjul.pdf" download="Resume.pdf">
+          <li className="tracking-widest uppercase bg-red-600 px-2 py-3 rounded-lg font-bold hover:bg-red-700 cursor-pointer select-none active:scale-90 transition-all list-none max-[640px]:w-fit max-[640px]:mx-auto">
+            Download CV
+          </li>
+        </a>
       </div>
+
+      <GiHamburgerMenu
+        className="text-2xl min-[640px]:hidden"
+        onClick={() => setShowMobileMenu(!showMobileMenu)}
+      />
     </nav>
   );
 }

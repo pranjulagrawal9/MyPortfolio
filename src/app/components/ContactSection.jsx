@@ -68,29 +68,29 @@ function ContactSection() {
 
   return (
     <div id="contact">
-      <h2 className="mt-28 text-center text-5xl font-extrabold mb-16">
+      <h2 className="mt-28 text-center text-5xl font-extrabold mb-16 max-[425px]:text-3xl">
         Contact Me
       </h2>
-      <div className="flex gap-5">
-        <div className="w-1/3 p-5 bg-black rounded-md shadow-[inset_0px_0px_20px_0px_rgba(255,255,255,1)]">
+      <div className="flex gap-5 max-[850px]:flex-col max-[850px]:items-center max-[850px]:gap-10">
+        <div className="w-1/3 p-5 bg-black rounded-md shadow-[inset_0px_0px_20px_0px_rgba(255,255,255,1)] max-[850px]:w-4/5">
           <Lottie animationData={contact} style={{ width: "100%" }} />
-          <h3 className="text-4xl text-center font-bold tracking-wide mb-1">
+          <h3 className="text-4xl text-center font-bold tracking-wide mb-1 max-[425px]:text-3xl">
             Pranjul Agrawal
           </h3>
-          <h4 className="text-center text-lg font-medium text-red-500 mb-3">
+          <h4 className="text-center text-lg font-medium text-red-500 mb-3 max-[425px]:text-base">
             Software Developer
           </h4>
-          <p className="text-gray-400 text-lg mb-3">
+          <p className="text-gray-400 text-lg mb-3 max-[425px]:text-base">
             I am available for freelance work. Connect with me via and call in
             to my account.
           </p>
-          <div className="text-gray-400 text-lg">
+          <div className="text-gray-400 text-lg max-[425px]:text-base">
             Phone:{" "}
             <a href="tel:+919639901801" className="text-[#d1d5db]">
               +919639901801
             </a>
           </div>
-          <div className="text-gray-400 text-lg">
+          <div className="text-gray-400 text-lg max-[425px]:text-base">
             Email:{" "}
             <a
               href="mailto:pranjulagrawal9@gmail.com"
@@ -100,7 +100,7 @@ function ContactSection() {
             </a>
           </div>
         </div>
-        <div className="w-2/3 bg-black rounded-lg shadow-[inset_0px_0px_20px_0px_rgba(255,255,255,1)]">
+        <div className="w-2/3 bg-black rounded-lg shadow-[inset_0px_0px_20px_0px_rgba(255,255,255,1)] max-[850px]:w-11/12">
           <form
             className="p-5 w-full flex flex-col gap-5"
             ref={form}
