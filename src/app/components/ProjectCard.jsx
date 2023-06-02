@@ -1,30 +1,34 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React, { useState } from "react";
-import testImg from "../../../public/assets/images/swiggySnap.png";
 import ReactModal from "react-modal";
 import { RxCross2 } from "react-icons/rx";
 import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-function ProjectCard() {
+function ProjectCard({ title, image, desc }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <motion.div className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12 max-[850px]:w-2/3 max-[640px]:w-11/12" initial={{y: 100, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: .4}}>
+      <motion.div
+        className="px-3 flex-[0_0_33.33%] max-[1150px]:flex-[0_0_50%] mb-12 max-[850px]:w-2/3 max-[640px]:w-11/12"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
+      >
         <div>
-          <div className="p-7 bg-[#212428] rounded-3xl shadow-xl shadow-slate-600 hover:bg-[#a10030] transition ease-in-out duration-200">
+          <div className="p-6 bg-[#212428] rounded-3xl shadow-xl shadow-slate-600 hover:bg-[#a10030] transition ease-in-out duration-200">
             <Image
-              src={testImg}
+              src={image}
               alt="Project"
               width="100%"
               className="mb-8 rounded-lg scale-100 cursor-pointer hover:scale-125 transition-all"
               onClick={() => setIsModalOpen(true)}
             />
             <h2 className="text-2xl font-semibold max-[425px]:text-lg">
-              Food Delivery Application made using React
+              {title}
             </h2>
           </div>
         </div>
@@ -50,33 +54,27 @@ function ProjectCard() {
 
         <div className="flex gap-5 max-[1024px]:flex-col">
           <div className="flex-1">
-            <Image src={testImg} width="100%" className="rounded-md" alt="Project" />
+            <Image
+              src={image}
+              width="100%"
+              className="rounded-md"
+              alt="Project"
+            />
           </div>
           <div className="flex-1">
             <h2 className="text-3xl font-extrabold mb-3 text-[#C4CFDE] max-[425px]:text-2xl">
-              Food Delivery Application made using React
+              {title}
             </h2>
 
             <ul className="font-medium text-[#a1aab8] leading-7 tracking-wide">
-              <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                Used Swiggy&apos;s public API to fetch restaurants data
-              </li>
-              <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                Leveraged the power of the Intersection Observer API to
-                implement efficient infinite scrolling, enabling dynamic loading
-                of restaurant data.
-              </li>
-              <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                Used Redux javascript libary for managing and centralizing
-                application state
-              </li>
-              <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                Utilized Parcel as a bundler, optimizing the application&apos;s
-                performance and facilitating smooth deployment.
-              </li>
-              <li className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold">
-                Implemented code splitting to make the code efficient
-              </li>
+              {desc.map((point, idx) => (
+                <li
+                  className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold"
+                  key={idx}
+                >
+                  {point}
+                </li>
+              ))}
             </ul>
 
             <div className="flex gap-10 mt-2.5 items-stretch max-[425px]:gap-5">
