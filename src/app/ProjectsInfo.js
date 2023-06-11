@@ -7,7 +7,7 @@ export const projects= [
         title: "Food Delivery web application made using React",
         image: swiggySnap,
         desc: ["Used Swiggy's public API to fetch restaurants data", "Leveraged the power of the Intersection Observer API to implement efficient infinite scrolling, enabling dynamic loading of restaurant data.", "Used Redux javascript libary for managing and centralizing application state", "Utilized Parcel as a bundler, optimizing the application's performance and facilitating smooth deployment.", "Implemented code splitting to make the code efficient"],
-        liveLink: "https://bit.ly/3Nn8RKV",
+        liveLink: "https://bit.ly/3oOevN2",
         githubLink: "https://bit.ly/45VEYc0"
     },
 
