@@ -7,7 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-function ProjectCard({ title, image, desc }) {
+function ProjectCard({ title, image, desc, liveLink, githubLink }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -78,15 +78,23 @@ function ProjectCard({ title, image, desc }) {
             </ul>
 
             <div className="flex gap-10 mt-2.5 items-stretch max-[425px]:gap-5">
-              <div className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-1 rounded transition-colors duration-300">
+              <a
+                href={liveLink}
+                target="_blank"
+                className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-1 rounded transition-colors duration-300"
+              >
                 <span>Live App</span>
                 <FiExternalLink
                   fontSize="26px"
                   className="group-hover:scale-125 transition-all max-[425px]:text-xl"
                 />
-              </div>
+              </a>
 
-              <div className="flex items-center group cursor-pointer hover:bg-white rounded px-1 transition-colors duration-300">
+              <a
+                href={githubLink}
+                target="_blank"
+                className="flex items-center group cursor-pointer hover:bg-white rounded px-1 transition-colors duration-300"
+              >
                 <span className="group-hover:text-red-600 font-bold text-[#C4CFDE]">
                   Source Code
                 </span>
@@ -147,7 +155,7 @@ function ProjectCard({ title, image, desc }) {
                     d="M41.457,58.914c-0.028,0-0.057-0.002-0.085-0.007c-3.442-0.585-6.372-2.975-7.646-6.238 c-0.101-0.257,0.026-0.547,0.284-0.647c0.256-0.101,0.547,0.027,0.647,0.284c1.146,2.938,3.783,5.089,6.882,5.615 c0.271,0.046,0.455,0.305,0.409,0.577C41.907,58.741,41.696,58.914,41.457,58.914z"
                   />
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
         </div>
