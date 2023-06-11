@@ -14,7 +14,7 @@ function HeroSection() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Software Engineer.", "Freelancer.", "Developer."],
+      strings: ["Software Engineer.", "Freelancer.", "Frontend Developer."],
       typeSpeed: 50,
       backSpeed: 40,
       backDelay: 1600,
