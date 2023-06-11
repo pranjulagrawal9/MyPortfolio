@@ -80,9 +80,10 @@ function ContactSection() {
           <h4 className="text-center text-lg font-medium text-red-500 mb-3 max-[425px]:text-base">
             Software Developer
           </h4>
-          <p className="text-gray-400 text-lg mb-3 max-[425px]:text-base">
-            I am available for freelance work. Connect with me via and call in
-            to my account.
+          <p className="text-gray-400 text-lg mb-3 max-[425px]:text-base text-justify">
+            I am currently open to freelance opportunities and welcome the
+            chance to collaborate. Please feel free to contact me via phone or
+            email for further discussions and inquiries.
           </p>
           <div className="text-gray-400 text-lg max-[425px]:text-base">
             Phone:{" "}
