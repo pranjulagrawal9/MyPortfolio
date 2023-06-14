@@ -86,7 +86,7 @@ function NavBar() {
             <li className="tracking-widest">Contact</li>
           </a>
         </ul>
-        <a href="/assets/images/Resume_Pranjul.pdf" download="Resume.pdf">
+        <a href="/assets/images/Pranjul_Agrawal_Resume.pdf" download="Pranjul_Agrawal_Resume.pdf">
           <li className="tracking-widest uppercase bg-red-600 px-2 py-3 rounded-lg font-bold hover:bg-red-700 cursor-pointer select-none active:scale-90 transition-all list-none max-[640px]:w-fit max-[640px]:mx-auto">
             Download CV
           </li>
