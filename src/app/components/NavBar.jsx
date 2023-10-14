@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Photo from "../../../public/assets/images/Photo.png";
+import Profile from "../../../public/assets/images/profile.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function NavBar() {
@@ -52,18 +53,15 @@ function NavBar() {
       id="home"
       className="px-7 flex justify-between items-center h-20 mb-8 transition-opacity duration-500"
     >
-      <div className="w-16 h-16 max-[850px]:w-12 max-[850px]:h-12 bg-black rounded-full overflow-hidden border-[3px] border-gray-700">
-        <Image
-          src={Photo}
-          width="64"
-          className="w-32 h-32 max-[850px]:w-24 max-[850px]:h-24 object-cover "
-          alt="Logo"
-        />
+      <div className="w-14 h-14 max-[850px]:w-12 max-[850px]:h-12 rounded-full overflow-hidden">
+        <Image src={Profile} className="w-full h-full" alt="Logo" />
       </div>
 
       <div
         className={`flex text-sm gap-6 max-[640px]:hidden max-[640px]:gap-4 ${
-          showMobileMenu ? "!flex max-[640px]:flex-col max-[640px]:absolute max-[640px]:top-20 max-[640px]:left-0 max-[640px]:right-0 max-[640px]:bg-[#243b55] max-[640px]:p-6 max-[640px]:z-30 max-[640px]:shadow-lg" : ""
+          showMobileMenu
+            ? "!flex max-[640px]:flex-col max-[640px]:absolute max-[640px]:top-20 max-[640px]:left-0 max-[640px]:right-0 max-[640px]:bg-[#243b55] max-[640px]:p-6 max-[640px]:z-30 max-[640px]:shadow-lg"
+            : ""
         }`}
       >
         <ul className="flex gap-6 uppercase text-gray-300 items-center max-[640px]:flex-col max-[640px]:gap-4">
@@ -86,7 +84,10 @@ function NavBar() {
             <li className="tracking-widest">Contact</li>
           </a>
         </ul>
-        <a href="/assets/images/Pranjul_Agrawal_Resume.pdf" download="Pranjul_Agrawal_Resume.pdf">
+        <a
+          href="/assets/images/Pranjul_Agrawal_Resume.pdf"
+          download="Pranjul_Agrawal_Resume.pdf"
+        >
           <li className="tracking-widest uppercase bg-red-600 px-2 py-3 rounded-lg font-bold hover:bg-red-700 cursor-pointer select-none active:scale-90 transition-all list-none max-[640px]:w-fit max-[640px]:mx-auto">
             Download CV
           </li>
