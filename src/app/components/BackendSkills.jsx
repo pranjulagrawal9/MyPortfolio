@@ -16,7 +16,11 @@ function BackendSkills() {
       <ul className="flex flex-col gap-5">
         <li className="flex items-center">
           <div className="w-1/4 max-[640px]:w-1/3 flex justify-center">
-            <Image src={nodejs} className="w-20 max-[640px]:w-14" alt="nodejs" />
+            <Image
+              src={nodejs}
+              className="w-20 max-[640px]:w-14"
+              alt="nodejs"
+            />
           </div>
           <div className="w-3/4 max-[640px]:w-2/3">
             <div className="bg-black w-full h-5 max-[640px]:h-3 rounded-md flex items-center">
@@ -31,7 +35,7 @@ function BackendSkills() {
         </li>
         <li className="flex items-center">
           <div className="w-1/4 max-[640px]:w-1/3 flex justify-center">
-            <h3 className="text-3xl max-[640px]:text-2xl">express</h3>
+            <h3 className="text-3xl max-[640px]:text-2xl">express.js</h3>
           </div>
           <div className="w-3/4 max-[640px]:w-2/3">
             <div className="bg-black w-full h-5 max-[640px]:h-3 rounded-md flex items-center">
@@ -46,7 +50,11 @@ function BackendSkills() {
         </li>
         <li className="flex items-center">
           <div className="w-1/4 max-[640px]:w-1/3 flex justify-center">
-            <Image src={mongodb} className="w-20 px-2 max-[640px]:w-14" alt="mongodb" />
+            <Image
+              src={mongodb}
+              className="w-20 px-2 max-[640px]:w-14"
+              alt="mongodb"
+            />
           </div>
           <div className="w-3/4 max-[640px]:w-2/3">
             <div className="bg-black w-full h-5 max-[640px]:h-3 rounded-md flex items-center">
