@@ -27,7 +27,7 @@ function ProjectCard({ title, image, desc, liveLink, githubLink }) {
               className="mb-8 rounded-lg scale-100 cursor-pointer hover:scale-125 transition-all"
               onClick={() => setIsModalOpen(true)}
             />
-            <h2 className="text-2xl font-semibold max-[425px]:text-lg">
+            <h2 className="text-2xl font-semibold max-[678px]:text-lg text-center">
               {title}
             </h2>
           </div>
