@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import reactAnimation from "../../../public/assets/images/react.json";
 import jsAnimation from "../../../public/assets/images/javascript.json";
 import cssAnimation from "../../../public/assets/images/css.json";
+import nextjs from "../../../public/assets/images/nextjs.png";
 
 function HeroSection() {
   const el = useRef(null);
@@ -169,7 +170,14 @@ function HeroSection() {
                 style={{ width: "70px" }}
               />
               <Lottie animationData={jsAnimation} style={{ width: "50px" }} />
-              <Lottie animationData={cssAnimation} style={{ width: "70px" }} />
+              <Image
+                src={nextjs}
+                alt="nextjs logo"
+                width={70}
+                height={70}
+                className="w-20 self-center"
+                quality={100}
+              />
             </div>
           </div>
         </div>
