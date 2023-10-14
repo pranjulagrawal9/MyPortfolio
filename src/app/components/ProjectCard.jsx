@@ -66,10 +66,10 @@ function ProjectCard({ title, image, desc, liveLink, githubLink }) {
               {title}
             </h2>
 
-            <ul className="font-medium text-[#a1aab8] leading-7 tracking-wide">
+            <ul className="font-medium lg:text-lg text-[#a1aab8] leading-7 tracking-wide">
               {desc.map((point, idx) => (
                 <li
-                  className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold"
+                  className="before:content-['⇒'] before:text-red-500 before:text-xl before:font-extrabold mb-2"
                   key={idx}
                 >
                   {point}
@@ -81,7 +81,7 @@ function ProjectCard({ title, image, desc, liveLink, githubLink }) {
               <a
                 href={liveLink}
                 target="_blank"
-                className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-1 rounded transition-colors duration-300"
+                className="flex gap-3 items-center group text-[#C4CFDE] cursor-pointer hover:text-red-600 font-bold hover:bg-white px-2 rounded transition-colors"
               >
                 <span>Live App</span>
                 <FiExternalLink
@@ -93,7 +93,7 @@ function ProjectCard({ title, image, desc, liveLink, githubLink }) {
               <a
                 href={githubLink}
                 target="_blank"
-                className="flex items-center group cursor-pointer hover:bg-white rounded px-1 transition-colors duration-300"
+                className="flex items-center group cursor-pointer hover:bg-white rounded px-2 transition-colors duration-300"
               >
                 <span className="group-hover:text-red-600 font-bold text-[#C4CFDE]">
                   Source Code

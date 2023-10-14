@@ -51,7 +51,8 @@ export const projects = [
     image: notesSnap,
     desc: [
       "Built with React, CSS, and Redux for a seamless user interface.",
-      "Implemented impressive dark mode features for enhanced visual comfort in low-light environments.",
+      "Implemented impressive dark mode feature for enhanced visual comfort in low-light environments.",
+      "Features such as save, search, edit and delete a note.",
     ],
     liveLink: "https://keeep-notes.vercel.app/",
     githubLink: "https://github.com/pranjulagrawal9/KeepNotes",
