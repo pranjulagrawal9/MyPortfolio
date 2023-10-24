@@ -7,7 +7,6 @@ import Photo from "../../../public/assets/images/Photo.png";
 import Lottie from "lottie-react";
 import reactAnimation from "../../../public/assets/images/react.json";
 import jsAnimation from "../../../public/assets/images/javascript.json";
-import cssAnimation from "../../../public/assets/images/css.json";
 import nextjs from "../../../public/assets/images/nextjs.png";
 
 function HeroSection() {
@@ -48,7 +47,7 @@ function HeroSection() {
           id="my-desc"
           className="leading-7 mb-24 max-[1150px]:mb-10 max-[950px]:text-sm max-[950px]:leading-6 max-[850px]:text-base max-[850px]:leading-7 max-[375px]:text-sm max-[375px]:leading-6"
         >
-          I am a passionate frontend developer dedicated to crafting captivating
+          I am a passionate software developer dedicated to crafting captivating
           user experiences through clean and intuitive web interfaces. Driven by
           collaboration and staying up-to-date with the latest trends, I create
           modern and engaging digital experiences that bring ideas to life.

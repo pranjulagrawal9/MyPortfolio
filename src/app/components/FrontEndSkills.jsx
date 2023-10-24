@@ -6,6 +6,7 @@ import react from "../../../public/assets/images/react.png";
 import js from "../../../public/assets/images/js.png";
 import redux from "../../../public/assets/images/redux.png";
 import git from "../../../public/assets/images/git.png";
+import sass from "../../../public/assets/images/sass.png";
 import { motion } from "framer-motion";
 
 function FrontEndSkills() {
@@ -167,6 +168,22 @@ function FrontEndSkills() {
                 className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
                 initial={{ width: "0%" }}
                 whileInView={{ width: "80%" }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true }}
+              ></motion.div>
+            </div>
+          </div>
+        </li>
+        <li className="flex items-center">
+          <div className="w-1/4 max-[640px]:w-1/3 flex justify-center">
+            <Image src={sass} className="w-20 max-[640px]:w-14" alt="css" />
+          </div>
+          <div className="w-3/4 max-[640px]:w-2/3">
+            <div className="bg-black w-full h-5 max-[640px]:h-3 rounded-md flex items-center">
+              <motion.div
+                className="bg-gradient-to-r from-[#f02981] to-[#c81901] h-[80%] rounded-md"
+                initial={{ width: "0%" }}
+                whileInView={{ width: "90%" }}
                 transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
               ></motion.div>
