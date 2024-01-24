@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Photo from "../../../public/assets/images/Photo.png";
+import { FaGithub } from "react-icons/fa";
 import Profile from "../../../public/assets/images/profile.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -58,7 +59,7 @@ function NavBar() {
       </div>
 
       <div
-        className={`flex text-sm gap-6 max-[640px]:hidden max-[640px]:gap-4 ${
+        className={`flex text-sm gap-6 max-[640px]:hidden max-[640px]:gap-4 items-center ${
           showMobileMenu
             ? "!flex max-[640px]:flex-col max-[640px]:absolute max-[640px]:top-20 max-[640px]:left-0 max-[640px]:right-0 max-[640px]:bg-[#243b55] max-[640px]:p-6 max-[640px]:z-30 max-[640px]:shadow-lg"
             : ""
@@ -84,6 +85,9 @@ function NavBar() {
             <li className="tracking-widest">Contact</li>
           </a>
         </ul>
+        <a href="https://github.com/pranjulagrawal9" target="_blank">
+          <FaGithub size={32} />
+        </a>
         {/* <a
           href="/assets/images/Pranjul_Agrawal_Resume.pdf"
           download="Pranjul_Agrawal_Resume.pdf"
